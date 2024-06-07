@@ -18,8 +18,8 @@ public class UserController {
     private UserService userService;
 
 
-     //@RequestMapping(value = "/getAllUsers",method = RequestMethod.GET)
-      @GetMapping
+     @RequestMapping(value = "/getAllUsers",method = RequestMethod.GET)
+     
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
@@ -30,8 +30,8 @@ public class UserController {
         return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-//    @PostMapping("/create")
-    @PostMapping
+      @PostMapping("/create")
+    
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
     }
