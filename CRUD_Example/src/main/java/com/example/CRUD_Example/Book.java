@@ -1,4 +1,5 @@
 package com.example.CRUD_Example;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -77,4 +78,7 @@ public class Book {
     // default constructor
     public Book(){
     }
+
+
+
 }
